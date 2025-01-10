@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Academy: Sedona - Каталог</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="header-nav">
+      <a class="logo" href="">
+        <img src="" alt="Логотип Sedona">
+      </a>
+
+      <ul class="site-menu">
+        <li class="site-menu-item site-menu-item-active">
+          <a class="site-menu-link">Главная</a>
+        </li>
+        <li class="site-menu-item">
+          <a class="site-menu-link" href="#">О Седоне</a>
+        </li>
+        <li class="site-menu-item">
+          <a class="site-menu-link" href="catalog.html">Гостиницы</a>
+        </li>
+      </ul>
+
+      <ul class="additional-menu">
+        <li class="additional-menu-item">
+          <a class="icon-button" href="#">
+            <span class="visually-hidden">Поиск</span>
+          </a>
+        </li>
+        <li class="additional-menu-item">
+          <a class="icon-button" href="#">
+            <span class="visually-hidden">Избранное</span>
+            <span class="icon-button-counter">12</span>
+          </a>
+        </li>
+        <li class="additional-menu-item">
+          <a class="button" href="#">Хочу сюда!</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="catalog-main">
+    <header class="catalog-header">
+      <h1 class="catalog-title">Гостиницы Седоны</h1>
+      <ul class="breadcrumbs-list">
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="index.html">
+            <span class="visibility-hidden">Главная страница</span>
+            <img src="" alt="Иконка ссылки на главную страницу">
+          </a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link">Гостиницы</a>
+        </li>
+      </ul>
+    </header>
+
+    <section class="catalog-products">
+      <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
+      <form class="catalog-form" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset class="catalog-filter-group">
+          <legend class="catalog-filter-title">Инфраструктура:</legend>
+          <ul class="catalog-filter-list">
+            <li class="catalog-filter-item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
+                <span class="control-mark"></span>
+                <span class="control-label">Бассейн</span>
+              </label>
+            </li>
+            <li class="catalog-filter-item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
+                <span class="control-mark"></span>
+                <span class="control-label">Парковка</span>
+              </label>
+            </li>
+            <li class="catalog-filter-item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="checkbox" name="wifi">
+                <span class="control-mark"></span>
+                <span class="control-label">Wi-Fi</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="catalog-filter-group">
+          <legend class="catalog-filter-title">Тип жилья:</legend>
+          <ul class="catalog-filter-list">
+            <li class="catalog-filter-item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="radio" name="product-group" value="hotel" checked>
+                <span class="control-mark"></span>
+                <span class="control-label">Гостиница</span>
+              </label>
+            </li>
+            <li class="catalog-filter-item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="radio" name="product-group" value="motel">
+                <span class="control-mark"></span>
+                <span class="control-label">Мотель</span>
+              </label>
+            </li>
+            <li class="catalog-filter-item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="radio" name="product-group" value="apartments">
+                <span class="control-mark"></span>
+                <span class="control-label">Апартаменты</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="catalog-filter-group">
+          <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+
+          <label class="catalog-filter-label">
+            <input class="catalog-filter-input" type="number" name="min-price" value="0">
+            <span class="catalog-filter-input-text">от</span>
+          </label>
+
+          <label class="catalog-filter-label">
+            <input class="catalog-filter-input" type="number" name="max-price" value="9000">
+            <span class="catalog-filter-input-text">до</span>
+          </label>
+
+          <button class="range-toggle toggle-min" type="button">
+            <span class="visibility-hidden">Изменить минимальную цену</span>
+          </button>
+          <button class="range-toggle toggle-max" type="button">
+            <span class="visibility-hidden">Изменить максимальную цену</span>
+          </button>
+        </fieldset>
+
+        <fieldset class="catalog-filter-group">
+          <button class="button" type="submit">Применить</button>
+          <button class="button button-reset" type="reset">Сбросить</button>
+        </fieldset>
+      </form>
+
+      <p class="sorting-result">Найдено гостиниц: <span>38</span></p>
+      <form class="sorting-form" action="https://echo.htmlacademy.ru/" method="post">
+        <label class="visually-hidden" for="sorting">Сортировка</label>
+        <select class="select-control" name="sorting" id="sorting">
+          <option value="popular">Сначала популярные</option>
+          <option value="expensive">Сначала дорогие</option>
+          <option value="cheap" selected>Сначала дешёвые</option>
+        </select>
+        <button class="visually-hidden" type="submit">Сортировать гостиницы</button>
+      </form>
+    </section>
+
+  </main>
+
+</body>
+
+</html>
